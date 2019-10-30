@@ -1,0 +1,64 @@
+<link rel="stylesheet" type="text/css" href="/css/try.css">
+<script src="/js/try.js"></script>
+<div class="wrapper">
+  <!-- Sidebar / Barra lateral -->
+  <nav id="sidebar">
+      <div class="sidebar-header">
+          <h3>Trabalho Senai</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+          <p>Ações:</p>
+          <li>
+              <a href="#">Home</a>
+          </li>
+          <li>
+              <a href="#">Cadastro de Cliente</a>
+          </li>
+          <li>
+              <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Nova Localidade</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                      <a href="#">Novo Estado</a>
+                  </li>
+                  <li>
+                      <a href="#">Nova Cidade</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Contatos</a>
+          </li>
+      </ul>
+  </nav>
+</div>
+<!--Box/content de Pesquisa-->
+<form>
+    <script>
+
+        let produtos = ['iphone 11', 'Motorola one', 'sansung s10', 'Xiome MI9', 'iphone 8' ];
+        let busca = prompt ('Informe a busca');
+        let nencontrado = false
+
+        for (let i=0; i<produtos.length; i++){
+            if(produtos[i].toLowerCase().indexOf(busca.toLowerCase()) != -1){
+                console.log(produtos[i]+ ' indice '+ [i]);
+                nencontrado = true;
+            }
+            if (!nencontrado) {
+                console.log('Não foi encontrado na base de dados');
+                
+                
+            }
+        }
+
+    </script>
+  <div class="Busca">
+    <label for="busca">Procurar por Cliente:</label>
+    <input type="text" id="buscar" name="buscar"
+    placeholder="Digite o nome " required
+    size="50"  >
+    <button>Buscar</button>
+    <span class="validity"></span>
+  </div>
+</form>

@@ -6,32 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="/css/file.css">
+        
+<div class="container">
+        <header>
+            <div class="Busca">
+                <label for="busca">Procurar por Cliente:</label>
+                <input type="text" id="buscar" name="buscar"
+                placeholder="Digite o nome " required
+                size="50"  >
+                <button onclick="on()">Buscar</button>
+                <span class="validity"></span>
+              </div>
+              <script src="/js/menuBusca.js"></script>
+        </header>
+    </div>    
 </head>
 <body>
-<div class="container">
-    <header>
-        <div id="busca-logo">
-            <div id="logo">
-                <img src="/senai_logo.png" />                    
+
+<div class="wrapper">
+        <!-- Sidebar / Barra lateral -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div id="busca-logo">
+                <div id="logo">
+                    <img src="/senai_logo.png" />                    
+                </div>
             </div>
-        </div>
-        <div class="Busca">
-            <label for="busca">Procurar por Cliente:</label>
-            <input type="text" id="buscar" name="buscar"
-            placeholder="Digite o nome " required
-            size="50"  >
-            <button>Buscar</button>
-            <span class="validity"></span>
-          </div>
-        <nav id="menu">
-            <ul>
-                <li><a href="/html/estado.html">Cadastrar de nova localidade de atedimento</a></li>
-                <li><a href="/html/cliente.html">Cadastrar novo cliente</a></li>
-                <li><a href="#">Buscar</a></li>
-                <li><a href="#">    </a></li>
+            </div>
+      
+            <ul class="list-unstyled components">
+                <p>Ações:</p>
+                <li>
+                    <a href="/html/menu.html">Home</a>
+                </li>
+                <li>
+                    <a href="/html/cliente.html">Cadastro de Cliente</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Nova Localidade</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="/html/estado.html">Novo Estado</a>
+                        </li>
+                        <li>
+                            <a href="/html/cidade.html">Nova Cidade</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Contatos</a>
+                </li>
             </ul>
         </nav>
-    </header>
-</div>    
+      </div>
 </body>
 </html>

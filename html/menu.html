@@ -13,10 +13,11 @@
                 <label for="busca">Procurar por Cliente:</label>
                 <input type="text" id="buscar" name="buscar"
                 placeholder="Digite o nome " required
-                size="50"  >
+                size="50" >
                 <button onclick="on()">Buscar</button>
                 <span class="validity"></span>
               </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
               <script src="/js/menuBusca.js"></script>
         </header>
     </div>    
@@ -33,14 +34,14 @@
                 </div>
             </div>
             </div>
-      
             <ul class="list-unstyled components">
                 <p>Ações:</p>
                 <li>
                     <a href="/html/menu.html">Home</a>
                 </li>
                 <li>
-                    <a href="/html/cliente.html">Cadastro de Cliente</a>
+                    <!--<a href="/html/cliente.html">Cadastro de Cliente</a>-->
+                    <a href="javascript:abretela('cliente')">Cadastro de Cliente</a>
                 </li>
                 <li>
                     <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Nova Localidade</a>
@@ -55,9 +56,13 @@
                 </li>
                 <li>
                     <a href="#">Contatos</a>
+                    <a>Grupo: Felipe Silveira Ribeiro, Marco Antonio Merdeiros e Otto Spigariol</a>
                 </li>
             </ul>
         </nav>
       </div>
-</body>
+        <div id="oi">
+            <div id="conteudo">teste</div>
+        </div>
+    </body>
 </html>

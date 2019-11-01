@@ -167,3 +167,11 @@ ul ul a {
 }
 
 /* parte do sidebar/Barra lateral */
+
+#conteudo {
+    
+}
+#oi {
+    display: flex;
+    float: right;
+}

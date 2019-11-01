@@ -18,3 +18,18 @@ function on() {
     }
 }
 
+function abretela(nometela){
+
+    if (nometela == 'cliente')
+    {
+        nometela='cliente.html';
+    }
+    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+          //alert("External content loaded successfully!");
+        if(statusTxt == "error")
+          alert("Error: " + xhr.status + ": " + xhr.statusText);
+      });
+
+}
+

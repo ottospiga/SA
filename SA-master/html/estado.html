@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Estado</title>
+        <link rel="stylesheet" type="text/css" href="/css/file.css">
+    </head>
+<body onload="carregarDadosEstado()"> 
+    <script src="../js/estado.js"></script>
+    <h1>Cadastro de Estado</h1>
+    <form>
+        <div>
+            <label for="nome_estado">Estado:</label>
+            <input type='text' id="nome_estado" placeholder="Nome do Estado" />
+        </div>
+        <div>   
+            <label for="nome_pais">País:</label>
+            <input type='text' id="nome_pais" disabled/>
+        </div>
+        <div class="div-button">
+            <button onclick="salvarEstado()">Salvar</button>
+        </div>
+        <div>
+            <a href="/html/cidade.html">Avançar</a>
+        </div>
+    </form>
+</body>
+</html>

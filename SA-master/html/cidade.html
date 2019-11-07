@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Cidade</title>
+    <link rel="stylesheet" type="text/css" href="/css/file.css">
+</head>
+<body onload="carregarDados()">
+    <script src="../js/pais.js"></script>
+    <h1>Cadastro Cidade</h1>
+    <form action="javascript:void(0)">
+        <div>
+            <label for="nome_cidade">Cidade</label>
+            <input type="text" id="nome_cidade"
+            placeholder="Nome da Cidade"
+            required>
+        </div>
+        <div>
+            <label for="comboEstado">Estado:</label>
+            <select id="comboEstado">
+                <option value="">Selecione</option>
+            </select>
+        </div>
+        <div class="div-button">
+            <button onclick="salvarCidade()">Salvar</button>
+        </div> 
+        <div>
+            <a href="/html/menu.html">Voltar ao Menu</a>
+        </div>
+    </form>
+</body>
+</html>

@@ -176,3 +176,8 @@ ul ul a {
     left: 50%;
     padding: 20px;
 }
+.erro-validacao {
+    border: 1px solid red;
+  }
+  .classe_p {
+	backgroundColor:'#FF3349';

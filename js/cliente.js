@@ -68,3 +68,49 @@ function salvarCliente() {
     document.location.reload(true);
 }
 
+function validar() {
+    let cpf = document.getElementById('cpf');
+    if(!cpf.value.trim()) {
+        cpf.classList.add('erro-validacao');
+    }else{
+        cpf.classList.remove('erro-validacao');
+        salvarCpf(cpf.value)
+    }
+    
+}
+
+function salvarCpf(cpf) {
+    
+    // Se nunca foi salvo um array de nomes no local storage,
+    // salvamos um vazio
+    if (!localStorage.getItem('cpfs')) {
+        cpfs = [];
+        localStorage.setItem('cpfs', JSON.stringify(cpf));
+    }
+    // Como queremos
+    // ter apenas uma ocorrência de um único nome, primeiro
+    // verificamos se ele existe no array. Se existir, avisamos
+    // o usuário. Se não, adicionamos ao array.
+    nomes = JSON.parse(localStorage.getItem('cpfs'));
+
+    // Se não localizar o nome no array, inclui
+    if (!localizarCpf(cpf, cpfs)) {
+        cpfs.push(cpf);
+        localStorage.setItem('cpfs', JSON.stringify(nomes));
+        alert('Cliente incluído com sucesso!');
+    } else {
+        alert('Cliente já existe!');
+    }
+}
+
+function localizarCpf(cpf,cpfs) {
+    let localizou = false;
+    
+    for(let i=0; i<cpfs.length;i++){
+        if(cpf === cpfs[i]){
+            localizou = true;
+            break;
+        }
+    }
+    return localizou
+}

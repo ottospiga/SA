@@ -1,8 +1,8 @@
-function Cliente(nome, cpf, cnpj, cep, cidade, bairro, rua, numero,
+function Cliente(nome, cpf,  cep, cidade, bairro, rua, numero,
     celular, telefone, email){
         this.nome = nome;
         this.cpf =  cpf;
-        this.cnpj = cnpj;
+        
         this.cep = cep;
         this.cidade = cidade;
         this.bairro = bairro;
@@ -22,8 +22,7 @@ function salvarCliente() {
     input = document.getElementById('cpf');
     let cpf = input.value;
 
-    input = document.getElementById('cnpj');
-    let cnpj = input.value;
+   
 
     input = document.getElementById('cep');
     let cep = input.value;
@@ -50,7 +49,7 @@ function salvarCliente() {
     let email = input.value;
 
 
-    let cliente = new Cliente(nome, cpf, cnpj, cep, cidade,
+    let cliente = new Cliente(nome, cpf,  cep, cidade,
         bairro, rua, numero, celular,telefone, email);
 
     let listClientestr = localStorage.getItem('listaCliente');
@@ -59,58 +58,24 @@ function salvarCliente() {
         listCliente = JSON.parse(listClientestr);
     }
 
-    listCliente.push(cliente);
+    let localizou = false;
+    
+    for(let i=0; i<listCliente.length;i++){
+        if(cliente.cpf == listCliente[i].cpf){
+            localizou = true;
+            alert('cpf ja existe');
+            break;
+        }
+    }
+    if (!localizou){
+        listCliente.push(cliente);
+    
 
     listClientestr = JSON.stringify(listCliente);
 
     localStorage.setItem('listaCliente', listClientestr);
     // REFRESH NA PAGINA
     document.location.reload(true);
-}
-
-function validar() {
-    let cpf = document.getElementById('cpf');
-    if(!cpf.value.trim()) {
-        cpf.classList.add('erro-validacao');
-    }else{
-        cpf.classList.remove('erro-validacao');
-        salvarCpf(cpf.value)
-    }
-    
-}
-
-function salvarCpf(cpf) {
-    
-    // Se nunca foi salvo um array de nomes no local storage,
-    // salvamos um vazio
-    if (!localStorage.getItem('cpfs')) {
-        cpfs = [];
-        localStorage.setItem('cpfs', JSON.stringify(cpf));
-    }
-    // Como queremos
-    // ter apenas uma ocorrência de um único nome, primeiro
-    // verificamos se ele existe no array. Se existir, avisamos
-    // o usuário. Se não, adicionamos ao array.
-    nomes = JSON.parse(localStorage.getItem('cpfs'));
-
-    // Se não localizar o nome no array, inclui
-    if (!localizarCpf(cpf, cpfs)) {
-        cpfs.push(cpf);
-        localStorage.setItem('cpfs', JSON.stringify(nomes));
-        alert('Cliente incluído com sucesso!');
-    } else {
-        alert('Cliente já existe!');
     }
 }
 
-function localizarCpf(cpf,cpfs) {
-    let localizou = false;
-    
-    for(let i=0; i<cpfs.length;i++){
-        if(cpf === cpfs[i]){
-            localizou = true;
-            break;
-        }
-    }
-    return localizou
-}

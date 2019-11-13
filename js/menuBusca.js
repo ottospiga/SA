@@ -33,3 +33,47 @@ function abretela(nometela){
 
 }
 
+function abreestado(nometela){
+
+    if (nometela == 'estado')
+    {
+        nometela='estado.html';
+    }
+    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+          //alert("External content loaded successfully!");
+        if(statusTxt == "error")
+          alert("Error: " + xhr.status + ": " + xhr.statusText);
+      });
+
+}
+
+function abrecidade(nometela){
+
+    if (nometela == 'cidade')
+    {
+        nometela='cliente.html';
+    }
+    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+          //alert("External content loaded successfully!");
+        if(statusTxt == "error")
+          alert("Error: " + xhr.status + ": " + xhr.statusText);
+      });
+
+}
+
+function abrecontatos(nometela){
+
+    if (nometela == 'contatos')
+    {
+        nometela='contatos.html';
+    }
+    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+          //alert("External content loaded successfully!");
+        if(statusTxt == "error")
+          alert("Error: " + xhr.status + ": " + xhr.statusText);
+      });
+
+}

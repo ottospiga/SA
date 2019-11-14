@@ -11,6 +11,18 @@
                $("#cpf").mask("999.999.999-99");
             });
             </script>
+<script language="javascript" type="text/javascript">
+    function Pageload() {
+        $(":text").blur(validar);
+    }
+    function validar() {
+        if ($(this).val() === "")
+            $(this).next("span").show();
+        else
+            $(this).next("span").hide();
+
+    }
+</script>
 </head>
 <body>
     <script src="../js/cliente.js"></script>

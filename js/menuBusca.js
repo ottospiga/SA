@@ -35,10 +35,8 @@ function abretela(nometela){
 
 function abreestado(nometela){
 
-    if (nometela == 'estado')
-    {
-        nometela='estado.html';
-    }
+    var nometela='estado.html';
+    
     $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
         if(statusTxt == "success")
           //alert("External content loaded successfully!");
@@ -50,10 +48,8 @@ function abreestado(nometela){
 
 function abrecidade(nometela){
 
-    if (nometela == 'cidade')
-    {
-        nometela='cliente.html';
-    }
+    var nometela='cliente.html';
+
     $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
         if(statusTxt == "success")
           //alert("External content loaded successfully!");
@@ -65,10 +61,8 @@ function abrecidade(nometela){
 
 function abrecontatos(nometela){
 
-    if (nometela == 'contatos')
-    {
-        nometela='contatos.html';
-    }
+    var nometela='contatos.html';
+
     $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
         if(statusTxt == "success")
           //alert("External content loaded successfully!");

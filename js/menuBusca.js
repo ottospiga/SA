@@ -19,55 +19,17 @@ function on() {
 }
 
 function abretela(nometela){
-
-    if (nometela == 'cliente')
-    {
-        nometela='cliente.html';
-    }
-    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-          //alert("External content loaded successfully!");
-        if(statusTxt == "error")
-          alert("Error: " + xhr.status + ": " + xhr.statusText);
-      });
-
+    $("#conteudo").load(nometela);
 }
 
 function abreestado(nometela){
-
-    var nometela='estado.html';
-    
-    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-          //alert("External content loaded successfully!");
-        if(statusTxt == "error")
-          alert("Error: " + xhr.status + ": " + xhr.statusText);
-      });
-
+    $("#conteudo").load(nometela);
 }
 
 function abrecidade(nometela){
-
-    var nometela='cliente.html';
-
-    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-          //alert("External content loaded successfully!");
-        if(statusTxt == "error")
-          alert("Error: " + xhr.status + ": " + xhr.statusText);
-      });
-
+    $("#conteudo").load(nometela);
 }
 
 function abrecontatos(nometela){
-
-    var nometela='contatos.html';
-
-    $("#conteudo").load(nometela, function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-          //alert("External content loaded successfully!");
-        if(statusTxt == "error")
-          alert("Error: " + xhr.status + ": " + xhr.statusText);
-      });
-
+    $("#conteudo").load(nometela);
 }

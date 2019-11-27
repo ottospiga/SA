@@ -21,15 +21,3 @@ function on() {
 function abretela(nometela){
     $("#conteudo").load(nometela);
 }
-
-function abreestado(nometela){
-    $("#conteudo").load(nometela);
-}
-
-function abrecidade(nometela){
-    $("#conteudo").load(nometela);
-}
-
-function abrecontatos(nometela){
-    $("#conteudo").load(nometela);
-}

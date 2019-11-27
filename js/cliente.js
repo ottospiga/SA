@@ -2,7 +2,6 @@ function Cliente(nome, cpf,  cep, cidade, bairro, rua, numero,
     celular, telefone, email){
         this.nome = nome;
         this.cpf =  cpf;
-        
         this.cep = cep;
         this.cidade = cidade;
         this.bairro = bairro;

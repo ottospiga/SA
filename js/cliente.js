@@ -22,7 +22,6 @@ function salvarCliente() {
     let cpf = input.value;
 
    
-
     input = document.getElementById('cep');
     let cep = input.value;
 
